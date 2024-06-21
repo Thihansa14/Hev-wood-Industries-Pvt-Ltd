@@ -1,2 +1,8 @@
-# Hev-wood-Industries-Pvt-Ltd
-This repository contains the source code and assets for the official website of HEV-Wood Industries (Pvt) Ltd. Located in Bandaragama, HEV-Wood Industries manufactures high-quality, sustainable plywood doors. Our site details our products, processes, and services, highlighting our commitment to craftsmanship and eco-friendly practices.
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
