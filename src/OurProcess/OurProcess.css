@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;700&family=AmstelvarAlpha&family=Adamina&display=swap');
+
+.process-container {
+  font-family: 'Arial', sans-serif;
+  color: #4e4e4e;
+  padding: 20px;
+}
+
+.process-header {
+    text-align: left;
+    margin-bottom: 30px;
+    background-color: #706233; /* Background color for the big rectangle */
+    padding: 20px;
+    border-radius: 10px;
+    position: relative; /* Make the container relative */
+    display: flex;
+    flex-direction: column;
+    min-height: 300px; /* Set a minimum height to ensure the rectangle is taller */
+  }
+  
+  .process-header h1 {
+    font-size: 50px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-align: left; /* Center align the header text */
+    font-family: 'Admina', serif;
+  }
+  
+  .process-header p {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    max-width: 600px; /* Set a max width to help control line breaks */
+    line-height: 1.6;
+    font-family: 'AmstelvarAlpha', serif;
+  }
+  
+  .process-header img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    position: absolute; /* Position the image absolutely */
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    max-height: calc(100% - 40px); /* Ensure the image fits within the rectangle */
+  }
+
+.process-step {
+  margin-bottom: 40px;
+}
+
+.process-step h2 {
+  font-size: 40px;
+  color: #75673b;
+  margin-bottom: 20px;
+  margin-right: 50px;
+  font-family: 'Alegreya SC', serif;
+  text-align: right;
+}
+
+.process-step1 h2 {
+    font-size: 40px;
+    color: #75673b;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    font-family: 'Alegreya SC', serif;
+    text-align: left;
+  }
+
+.step-content1 {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: #B0926A; /* Background color for the big rectangle */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.step-text1 {
+  flex: 2;
+  font-size: 20px;
+  line-height: 1.6;
+  background-color: #FAE7C9; /* Background color for the smaller rectangle */
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'AmstelvarAlpha', serif;
+}
+
+.step-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: #706233; /* Background color for the big rectangle */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+.step-text {
+    flex: 2;
+    font-size: 20px;
+    line-height: 1.6;
+    background-color: #E1C78F; /* Background color for the smaller rectangle */
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'AmstelvarAlpha', serif;
+  }
+  
+.step-image {
+    flex: 1;
+    max-width: 250px;
+    border-radius: 10px;
+  
+  }
+  
+/* Adjust flex-direction based on odd/even step */
+.process-step:nth-child(odd) .step-content {
+  flex-direction: row-reverse;
+}
+
+.process-step:nth-child(even) .step-content {
+  flex-direction: row;
+}
+
+
