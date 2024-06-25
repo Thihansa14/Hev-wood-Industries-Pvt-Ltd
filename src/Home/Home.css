@@ -1,0 +1,181 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #4e4e4e;
+}
+
+.home-container {
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #706233;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.intro {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.intro h1 {
+    font-size: 50px;
+    font-family: 'Adamina', serif;
+}
+
+.intro p {
+    font-size: 20px;
+    font-family: 'AmstelvarAlpha', serif;
+}
+
+.intro button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #706233;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.intro button:hover {
+    background-color: #5a4e1f;
+}
+
+/* About Us Section */
+.about-us {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    background-color: #f5e3c3;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text h2 {
+    font-size: 30px;
+    font-family: 'Alegreya SC', serif;
+}
+
+.about-text p {
+    font-size: 18px;
+}
+
+/* Featured Products Section */
+.featured-products {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.featured-products h2 {
+    font-size: 30px;
+    font-family: 'Alegreya SC', serif;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.product-carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.product {
+    flex: 0 0 25%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.prev,
+.next {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.why-choose-us h2 {
+    font-size: 30px;
+    font-family: 'Alegreya SC', serif;
+}
+
+.reasons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.reason {
+    text-align: center;
+    max-width: 150px;
+}
+
+.reason img {
+    width: 100%;
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.reason p {
+    font-size: 16px;
+}
