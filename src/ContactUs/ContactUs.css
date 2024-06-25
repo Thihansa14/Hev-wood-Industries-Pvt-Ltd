@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;700&family=AmstelvarAlpha&family=Adamina&display=swap');
+
+.contact-us-container {
+  font-family: 'Arial', sans-serif;
+  color: #4e4e4e;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #706233;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.header img {
+  width: 1000px; /* Adjust the size as needed */
+  margin-right: 20px;
+}
+
+.header-text {
+  text-align: right;
+}
+
+.header-text h1 {
+  font-size: 50px;
+  font-family: 'Adamina', serif;
+}
+
+.header-text p {
+  font-size: 20px;
+  font-family: 'AmstelvarAlpha', serif;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.info-item {
+  background-color: #FAE7C9;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.info-item h2 {
+  font-size: 24px;
+  font-family: 'Alegreya SC', serif;
+  color: #75673b;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-item h2::before {
+  content: '';
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  margin-right: 10px;
+}
+
+.info-item.location h2::before {
+  background-image: url('src/ContactUs/LocationIcon.png'); /* Replace with the path to the location icon */
+}
+
+.info-item.phone h2::before {
+  background-image: url('src/ContactUs/ContactIcon.png'); /* Replace with the path to the phone icon */
+}
+
+.info-item.email h2::before {
+  background-image: url('src/ContactUs/emailIcon.png'); /* Replace with the path to the email icon */
+}
+
+.contact-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-form {
+  background-color: #E1C78F;
+  padding: 50px;
+  border-radius: 50px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form h2 {
+  font-size: 30px;
+  font-family: 'Alegreya SC', serif;
+  color: #000000;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Make the form take full width */
+    align-items: center;
+}
+
+.contact-form label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  width: 100%; /* Make labels take full width */
+  text-align: left; /* Align text to the left */
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  width: 100%; /* Make input fields take full width */
+  max-width: 600px; /* Set a max-width for better responsiveness */
+}
+
+
+.contact-form button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #706233;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #5a4e1f;
+}
+
+.contact-image {
+  width: 50%;
+}
+
+.contact-image img {
+  width: 100%;
+  /* border-radius: 10px; */
+}
+
+.map {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.map h2 {
+  font-size: 60px;
+  font-family: 'Alegreya SC', serif;
+  color: #75673b;
+  margin-bottom: 10px;
+}
+
+.map p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-radius: 10px;
+}
