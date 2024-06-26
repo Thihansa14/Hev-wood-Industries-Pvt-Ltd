@@ -1,14 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
-// import logo from '../path/to/logo.png'; 
+import logo from './Logo.png'; 
 
 const NavBar = () => {
+  const [shrink, setShrink] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setShrink(true);
+      } else {
+        setShrink(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="navbar">
-      {/* <div className="navbar-logo">
+    <nav className={`navbar ${shrink ? 'shrink' : ''}`}>
+      <div className="navbar-logo">
         <img src={logo} alt="Logo" />
-      </div> */}
+      </div>
       <ul className="navbar-links">
         <li>
           <Link to="/">Home</Link>

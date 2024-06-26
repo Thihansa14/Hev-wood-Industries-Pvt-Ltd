@@ -1,57 +1,86 @@
+/* Add padding to the top of the body or main container */
+body {
+    padding-top: 140px; /* Adjust this value based on the actual height of your navbar */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #000000;
+}
+
+/* Navbar styles */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #75673b; /* Matching the background color from the image */
-    padding: 10px 20px;
-  }
-  
-  .navbar-logo img {
+    padding: 20px 30px;
+    position: fixed; /* Make the navbar fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure the navbar is above other content */
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar.shrink {
+    padding: 10px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo img {
     width: 100px; /* Adjust the size as needed */
     height: auto;
-  }
-  
-  .navbar-links {
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar.shrink .navbar-logo img {
+    width: 60px; /* Adjust the size for the shrunken state */
+}
+
+.navbar-links {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
     margin-left: auto; /* Push items to the right */
-  }
-  
-  .navbar-links li {
+    transition: font-size 0.3s ease-in-out;
+}
+
+.navbar-links li {
     margin: 0 15px;
-  }
-  
-  .navbar-links a {
+}
+
+.navbar-links a {
     color: #fff;
     text-decoration: none;
     font-size: 18px; /* Adjust font size as needed */
-  }
-  
-  .navbar-links a:hover {
+}
+
+.navbar.shrink .navbar-links a {
+    font-size: 16px; /* Adjust font size for the shrunken state */
+}
+
+.navbar-links a:hover {
     text-decoration: underline;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .navbar {
       flex-direction: column;
       align-items: flex-start;
     }
-  
+
     .navbar-links {
       flex-direction: column;
       width: 100%;
     }
-  
+
     .navbar-links li {
       margin: 10px 0;
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .navbar-links a {
       font-size: 16px; /* Adjust font size for smaller screens */
     }
-  }
-  
+}

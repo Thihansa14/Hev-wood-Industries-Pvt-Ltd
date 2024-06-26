@@ -38,7 +38,7 @@ const Home = () => {
                 </div>
             </section>
             <section className="featured-products">
-                <h2>Featured Products</h2>
+                <h2>FEATURED PRODUCTS</h2>
                 <div className="carousel-container">
                     <button className="prev" onClick={scrollLeft}>&lt;</button>
                     <div className="product-carousel" id="product-carousel">
@@ -53,7 +53,7 @@ const Home = () => {
                 </div>
             </section>
             <section className="why-choose-us">
-                <h2>Why Choose Us?</h2>
+                <h2>WHY CHOOSE US?</h2>
                 <div className="reasons">
                     <div className="reason">
                         <img src={deliveryIcon} alt="Delivery" />

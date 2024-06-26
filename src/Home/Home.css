@@ -1,33 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;700&family=AmstelvarAlpha&family=Adamina&display=swap');
+
+
 /* General Styles */
-body {
+/* body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #4e4e4e;
-}
+} */
 
 .home-container {
     padding: 20px;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #706233;
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-}
-
-nav li {
-    margin: 0 15px;
-    cursor: pointer;
 }
 
 .intro {
@@ -62,7 +44,6 @@ nav li {
 /* About Us Section */
 .about-us {
     display: flex;
-    align-items: center;
     margin: 40px 0;
     background-color: #f5e3c3;
     padding: 20px;
@@ -70,8 +51,8 @@ nav li {
 }
 
 .about-image {
-    flex: 1;
-    margin-right: 20px;
+    flex: 2;
+    margin-right: 0; /* Remove margin to ensure no gap */
 }
 
 .about-image img {
@@ -80,17 +61,20 @@ nav li {
 }
 
 .about-text {
-    flex: 2;
+    flex: 3;
+    margin-left: 50px; /* Remove margin to ensure no gap */
 }
 
 .about-text h2 {
-    font-size: 30px;
+    font-size: 48px;
     font-family: 'Alegreya SC', serif;
 }
 
 .about-text p {
-    font-size: 18px;
+    font-size: 24px;
+    font-family: 'AmstelvarAlpha', serif;
 }
+
 
 /* Featured Products Section */
 .featured-products {
@@ -99,7 +83,7 @@ nav li {
 }
 
 .featured-products h2 {
-    font-size: 30px;
+    font-size: 40px;
     font-family: 'Alegreya SC', serif;
 }
 
@@ -118,10 +102,20 @@ nav li {
 
 .product {
     flex: 0 0 25%;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
+    height: 500px; /* height to accommodate padding */
+    padding: 10px;
+    box-sizing: border-box;
+    background: #fae7c9; /* background color to the product box */
+    border: 1px solid #fae7c9; /* border to the product box */
+    margin: 10px 20px; /* margin between product boxes */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* subtle shadow to the product box */
     transition: transform 0.3s;
+}
+
+.product img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain; 
 }
 
 .product:hover {
@@ -155,7 +149,7 @@ nav li {
 }
 
 .why-choose-us h2 {
-    font-size: 30px;
+    font-size: 40px;
     font-family: 'Alegreya SC', serif;
 }
 
@@ -167,7 +161,7 @@ nav li {
 
 .reason {
     text-align: center;
-    max-width: 150px;
+    max-width: 200px;
 }
 
 .reason img {
@@ -177,5 +171,5 @@ nav li {
 }
 
 .reason p {
-    font-size: 16px;
+    font-size: 20px;
 }
