@@ -57,7 +57,7 @@ const ContactUs = () => {
         </div>
         <div className="info-item phone">
           <h2>Phone</h2>
-          <p>+94 772 397 939<br /><br/> +94 777 875 509</p>
+          <p>+94 772 397 939<br /><br/> +94 777 875 509<br /><br/> +94 382 291 579</p>
         </div>
         <div className="info-item email">
           <h2>Email</h2>

@@ -170,6 +170,10 @@
     margin-bottom: 10px;
 }
 
+.reason img:hover {
+        background-color: #5a4e1f;
+}
+
 .reason p {
     font-size: 20px;
 }

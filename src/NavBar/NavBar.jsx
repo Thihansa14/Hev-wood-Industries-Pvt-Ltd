@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './NavBar.css';
 import logo from './Logo.png'; 
 
+
 const NavBar = () => {
   const [shrink, setShrink] = useState(false);
 

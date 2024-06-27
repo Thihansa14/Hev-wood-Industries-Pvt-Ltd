@@ -30,6 +30,7 @@ body {
     width: 100px; /* Adjust the size as needed */
     height: auto;
     transition: width 0.3s ease-in-out;
+    padding: 0px 0px 0px 50px;
 }
 
 .navbar.shrink .navbar-logo img {
