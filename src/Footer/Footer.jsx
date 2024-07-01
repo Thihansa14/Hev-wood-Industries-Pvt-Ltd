@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaInstagram, FaFacebook, FaPhone, FaEnvelope } from 'react-icons/fa';
 import './Footer.css'; 
 import companyLogo from './Logo.png'; 
 
@@ -41,6 +41,15 @@ const Footer = () => {
                             <FaFacebook className="icon" /> Facebook
                         </li>
                     </ul>
+                </div>
+                <div className="contact-us">
+                    <h3>CONTACT US</h3>
+                    <p>
+                        <FaPhone className="icon" /> <a href="tel:+94382289000">+94 382 289 000</a><br/> <a href="tel:+94772397939">+94 772 397 939</a>
+                    </p>
+                    <p>
+                        <FaEnvelope className="icon" /><a href="mailto:hevwood.industries@gmail.com">hevwood.industries@gmail.com</a>
+                    </p>
                 </div>
                 <div className="warehouse">
                     <h3>WAREHOUSE</h3>

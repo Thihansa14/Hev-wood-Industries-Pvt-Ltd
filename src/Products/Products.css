@@ -1,0 +1,142 @@
+/* General Styles */
+.products-container {
+    padding: 20px;
+    font-family: 'Arial, sans-serif';
+}
+
+.products-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.products-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.products-header p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Product Details */
+.product-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.product-details h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.product-details p {
+    font-size: 18px;
+    color: #555;
+}
+
+.close-details {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-details:hover {
+    color: #000;
+}
+
+/* Door Sizes Table */
+.door-sizes {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.door-sizes h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.door-sizes table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.door-sizes th, .door-sizes td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 18px;
+}
+
+.door-sizes th {
+    background: #f4f4f4;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.back-to-top:hover {
+    background: #555;
+}

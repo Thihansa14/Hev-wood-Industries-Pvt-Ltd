@@ -19,14 +19,16 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
+    margin-left: 50px;
+    text-align: left;
 }
 
-.quick-links, .follow-us, .warehouse {
+.quick-links, .follow-us, .warehouse, .contact-us {
     flex: 1;
     margin: 0 10px;
 }
 
-.quick-links h3, .follow-us h3, .warehouse h3 {
+.quick-links h3, .follow-us h3, .warehouse h3, .contact-us h3 {
     font-size: 20px;
     margin-bottom: 10px;
 }
@@ -53,6 +55,16 @@
 .icon {
     margin-right: 8px;
     size: 18px;
+}
+
+.contact-us p a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.contact-us p a:hover {
+    text-decoration: underline;
 }
 
 .warehouse p {

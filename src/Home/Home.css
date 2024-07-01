@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;700&family=AmstelvarAlpha&family=Adamina&display=swap');
 
-
 /* General Styles */
-/* body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #4e4e4e;
-} */
-
 .home-container {
     padding: 20px;
 }
@@ -42,39 +35,54 @@
 }
 
 /* About Us Section */
-.about-us {
+.about-ushome {
     display: flex;
     margin: 40px 0;
-    background-color: #f5e3c3;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
+    align-items: center;
 }
 
-.about-image {
+.about-imagehome {
     flex: 2;
     margin-right: 0; /* Remove margin to ensure no gap */
 }
 
-.about-image img {
+.about-imagehome img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 0px;
+    /* position: relative; */
+    z-index: 1;
 }
 
-.about-text {
+.about-texthome {
     flex: 3;
-    margin-left: 50px; /* Remove margin to ensure no gap */
+    background-color: #e1c78f;
+    padding: 73px;
+    border-radius: 0px;
+    color: #fff;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
 }
 
-.about-text h2 {
+.about-texthome h2 {
     font-size: 48px;
     font-family: 'Alegreya SC', serif;
+    color: #000000;
+    margin: 0 0 20px 0; /* Optional: Add margin between h2 and p */
 }
 
-.about-text p {
-    font-size: 24px;
+.about-texthome p {
+    font-size: 20px;
     font-family: 'AmstelvarAlpha', serif;
+    color: #000000;
+    margin: 0; /* Remove default margin */
 }
-
 
 /* Featured Products Section */
 .featured-products {
@@ -168,12 +176,49 @@
     width: 100%;
     max-width: 100px;
     margin-bottom: 10px;
+    transition: outline 0.3s ease-in-out; /* Smooth transition */
 }
 
 .reason img:hover {
-        background-color: #5a4e1f;
+    outline: 3px solid #5a4e1f; /* Outline on hover */
 }
 
 .reason p {
     font-size: 20px;
 }
+
+/* Trusted Clients Section */
+.trusted-clients {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.trusted-clients h2 {
+    font-size: 40px;
+    font-family: 'Alegreya SC', serif;
+}
+
+.clients-carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.client {
+    flex: 0 0 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client img {
+    width: 40%;
+    height: auto;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+/* .client img:hover {
+    transform: scale(1.1);
+} */
