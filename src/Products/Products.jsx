@@ -86,14 +86,6 @@ const Products = () => {
                 </div>
             )}
 
-            <div className="gallery-section">
-                <h1>Gallery</h1>
-                <div className="gallery-grid">
-                    {galleryImages.map((image, index) => (
-                        <img key={index} src={image.url} alt={`Gallery ${index}`} />
-                    ))}
-                </div>
-            </div>
             <div className="standard-sizes">
                 <h1>Standard Door Sizes</h1>
                 <table className="standard-sizes-table">
@@ -133,7 +125,15 @@ const Products = () => {
                     </tbody>
                 </table>
             </div>
-            <button className="back-to-top" onClick={() => window.scrollTo(0, 0)}>Back to Top</button>
+            <div className="gallery-section">
+                <h1>Gallery</h1>
+                <div className="gallery-grid">
+                    {galleryImages.map((image, index) => (
+                        <img key={index} src={image.url} alt={`Gallery ${index}`} />
+                    ))}
+                </div>
+            </div>
+            <button className="back-to-top" onClick={() => window.scrollTo(0, 0)}> ↑ Back to Top</button>
         </div>
     );
 };

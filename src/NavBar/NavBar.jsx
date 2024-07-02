@@ -44,6 +44,13 @@ const NavBar = () => {
           <Link to="/contact-us">Contact us</Link>
         </li>
       </ul>
+      <ul>
+      <ul>
+        <li>
+        <a href="/brochure.pdf" download="Brochure" className="download-button">Download Brochure</a>
+        </li>
+      </ul>
+      </ul>
     </nav>
   );
 };

@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: #75673b; /* Matching the background color from the image */
-    padding: 20px 30px;
+    padding: 5px 30px;
     position: fixed; /* Make the navbar fixed at the top */
     top: 0;
     left: 0;
@@ -57,11 +57,23 @@ body {
 }
 
 .navbar.shrink .navbar-links a {
-    font-size: 16px; /* Adjust font size for the shrunken state */
+    font-size: 15px; /* Adjust font size for the shrunken state */
 }
 
 .navbar-links a:hover {
-    text-decoration: underline;
+    color: #362b06;
+}
+
+.download-button {
+    background-color: #51410a;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.download-button:hover {
+    background-color: #362b06;
 }
 
 @media (max-width: 768px) {
