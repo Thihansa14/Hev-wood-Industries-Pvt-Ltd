@@ -1,97 +1,102 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './Products.css';
-import doorImage1 from './doorImage1.png'; // Replace with actual image paths
-import doorImage2 from './doorImage2.png';
-import doorImage3 from './doorImage3.png';
-import doorImage4 from './doorImage4.png';
-import doorImage5 from './doorImage5.png';
-import doorImage6 from './doorImage6.png';
-
-const doorData = [
-    {
-        id: 1,
-        name: 'Standard Door',
-        image: doorImage1,
-        details: 'Standard doors are simple and versatile, suitable for any interior space.',
-        specifications: 'Material: Wood, Finish: Matte, Installation: Easy'
-    },
-    {
-        id: 2,
-        name: 'Non-Standard Door',
-        image: doorImage2,
-        details: 'Non-standard doors are custom made to fit unique sizes and styles.',
-        specifications: 'Material: Wood, Finish: Gloss, Installation: Moderate'
-    },
-    {
-        id: 3,
-        name: 'Glass Opening Door',
-        image: doorImage3,
-        details: 'Glass opening doors feature glass panels to let in light and create a modern look.',
-        specifications: 'Material: Wood and Glass, Finish: Semi-gloss, Installation: Moderate'
-    },
-    {
-        id: 4,
-        name: 'Solid Core Door',
-        image: doorImage4,
-        details: 'Solid core doors provide excellent soundproofing and durability.',
-        specifications: 'Material: Solid Wood, Finish: Matte, Installation: Difficult'
-    },
-    {
-        id: 5,
-        name: 'Sound Proof Door',
-        image: doorImage5,
-        details: 'Soundproof doors are designed to reduce noise transmission between rooms.',
-        specifications: 'Material: Solid Wood, Finish: Matte, Installation: Difficult'
-    },
-    {
-        id: 6,
-        name: 'Fire Rated Door',
-        image: doorImage6,
-        details: 'Fire rated doors offer added protection against the spread of fire.',
-        specifications: 'Material: Solid Wood, Finish: Matte, Installation: Moderate'
-    }
-];
 
 const Products = () => {
-    const [selectedDoor, setSelectedDoor] = useState(null);
+    const [products, setProducts] = useState([]);
+    const [selectedProduct, setSelectedProduct] = useState(null);
+    const [isAdmin, setIsAdmin] = useState(false);
+    const [galleryImages, setGalleryImages] = useState([]);
 
-    const handleDoorClick = (door) => {
-        setSelectedDoor(door);
+    useEffect(() => {
+        fetchProducts();
+        fetchGalleryImages();
+    }, []);
+
+    const fetchProducts = async () => {
+        try {
+            const response = await axios.get('http://localhost:5000/api/products');
+            setProducts(response.data);
+        } catch (error) {
+            console.error('Failed to fetch products', error);
+        }
+    };
+
+    const fetchGalleryImages = async () => {
+        try {
+            const response = await axios.get('http://localhost:5000/api/gallery');
+            setGalleryImages(response.data);
+        } catch (error) {
+            console.error('Failed to fetch gallery images', error);
+        }
+    };
+
+    const handleProductClick = (product) => {
+        setSelectedProduct(product);
+    };
+
+    const handleAdminLogin = (e) => {
+        e.preventDefault();
+        const username = e.target.username.value;
+        const password = e.target.password.value;
+        if (username === 'admin' && password === 'password') {
+            setIsAdmin(true);
+        } else {
+            alert('Invalid credentials');
+        }
+    };
+
+    const handleAdminLogout = () => {
+        setIsAdmin(false);
     };
 
     const handleCloseDetails = () => {
-        setSelectedDoor(null);
-    };
-
-    const handleBackToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+      setSelectedProduct(null);
     };
 
     return (
         <div className="products-container">
-            <header className="products-header">
-                <h1>PRODUCTS</h1>
-                <p>Customize your doors with a variety of sizes, finishes, and designs. Use our interactive tool to visualize your perfect door.</p>
-            </header>
+            <div className="admin-controls">
+                {isAdmin ? (
+                    <button onClick={handleAdminLogout}>Logout</button>
+                ) : (
+                    <form onSubmit={handleAdminLogin}>
+                        <input type="text" name="username" placeholder="Username" required />
+                        <input type="password" name="password" placeholder="Password" required />
+                        <button type="submit">Admin Login</button>
+                    </form>
+                )}
+            </div>
+            <h1>Our Products</h1>
             <div className="products-grid">
-                {doorData.map((door) => (
-                    <div key={door.id} className="product-card" onClick={() => handleDoorClick(door)}>
-                        <img src={door.image} alt={door.name} className="product-image" />
-                        <h2 className="product-name">{door.name}</h2>
+                {products.map(product => (
+                    <div key={product._id} className="product-card" onClick={() => handleProductClick(product)}>
+                        <img src={product.imageUrl} alt={product.name} />
+                        <h3>{product.name}</h3>
                     </div>
                 ))}
             </div>
-            {selectedDoor && (
+
+
+            {selectedProduct && (
                 <div className="product-details">
                     <button className="close-details" onClick={handleCloseDetails}>X</button>
-                    <h2>{selectedDoor.name}</h2>
-                    <p>{selectedDoor.details}</p>
-                    <p><strong>Specifications:</strong> {selectedDoor.specifications}</p>
+                    <h2>{selectedProduct.name}</h2>
+                    <p>{selectedProduct.description}</p>
                 </div>
             )}
-            <div className="door-sizes">
-                <h2>Standard Door Sizes</h2>
-                <table>
+
+            <div className="gallery-section">
+                <h1>Gallery</h1>
+                <div className="gallery-grid">
+                    {galleryImages.map((image, index) => (
+                        <img key={index} src={image.url} alt={`Gallery ${index}`} />
+                    ))}
+                </div>
+            </div>
+            <div className="standard-sizes">
+                <h1>Standard Door Sizes</h1>
+                <table className="standard-sizes-table">
                     <thead>
                         <tr>
                             <th>Height</th>
@@ -101,34 +106,34 @@ const Products = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>81”</td>
-                            <td>27”</td>
-                            <td>1 1/4”</td>
+                            <td>81"</td>
+                            <td>27"</td>
+                            <td>1 1/4"</td>
                         </tr>
                         <tr>
-                            <td>81”</td>
-                            <td>30”</td>
-                            <td>1 1/4”</td>
+                            <td>81"</td>
+                            <td>30"</td>
+                            <td>1 1/4"</td>
                         </tr>
                         <tr>
-                            <td>81”</td>
-                            <td>33”</td>
-                            <td>1 1/4”</td>
+                            <td>81"</td>
+                            <td>33"</td>
+                            <td>1 1/4"</td>
                         </tr>
                         <tr>
-                            <td>81”</td>
-                            <td>36”</td>
-                            <td>1 1/4”</td>
+                            <td>81"</td>
+                            <td>36"</td>
+                            <td>1 1/4"</td>
                         </tr>
                         <tr>
-                            <td>81”</td>
-                            <td>42”</td>
-                            <td>1 1/4”</td>
+                            <td>81"</td>
+                            <td>42"</td>
+                            <td>1 1/4"</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <button className="back-to-top" onClick={handleBackToTop}>↑ Back to Top</button>
+            <button className="back-to-top" onClick={() => window.scrollTo(0, 0)}>Back to Top</button>
         </div>
     );
 };

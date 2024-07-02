@@ -1,37 +1,56 @@
-/* General Styles */
 .products-container {
     padding: 20px;
     font-family: 'Arial, sans-serif';
 }
 
-.products-header {
+.admin-controls {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.admin-controls form {
+    display: inline-block;
+}
+
+.admin-controls input {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.admin-controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-controls button:hover {
+    background-color: #0056b3;
+}
+
+h1 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
-.products-header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.products-header p {
-    font-size: 18px;
-    color: #555;
-}
-
-/* Products Grid */
 .products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .product-card {
-    background: #fff;
-    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
     text-align: center;
+    width: 200px;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -39,19 +58,13 @@
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
 }
 
-.product-image {
+.product-card img {
     width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.product-name {
-    font-size: 20px;
-    color: #333;
+    height: auto;
+    border-radius: 5px;
 }
 
 /* Product Details */
@@ -95,48 +108,64 @@
     color: #000;
 }
 
-/* Door Sizes Table */
-.door-sizes {
-    margin: 40px 0;
+.gallery-section {
+    margin-top: 40px;
     text-align: center;
 }
 
-.door-sizes h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.door-sizes table {
-    width: 100%;
-    border-collapse: collapse;
+.gallery-grid img {
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+.standard-sizes {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.standard-sizes-table {
     margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
 }
 
-.door-sizes th, .door-sizes td {
-    padding: 10px;
-    border: 1px solid #ccc;
+.standard-sizes-table th, .standard-sizes-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
     text-align: center;
-    font-size: 18px;
 }
 
-.door-sizes th {
-    background: #f4f4f4;
+.standard-sizes-table th {
+    background-color: #f2f2f2;
 }
 
-/* Back to Top Button */
 .back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #333;
-    color: #fff;
-    border: none;
     padding: 10px 20px;
-    border-radius: 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 18px;
 }
 
 .back-to-top:hover {
-    background: #555;
+    background-color: #0056b3;
 }
