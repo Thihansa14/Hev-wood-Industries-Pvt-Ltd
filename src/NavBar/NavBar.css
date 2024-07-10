@@ -19,6 +19,7 @@ body {
     right: 0;
     z-index: 1000; /* Ensure the navbar is above other content */
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar.shrink {
@@ -42,7 +43,7 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-left: auto; /* Push items to the right */
+    margin-left: 100px; 
     transition: font-size 0.3s ease-in-out;
 }
 
@@ -54,14 +55,34 @@ body {
     color: #fff;
     text-decoration: none;
     font-size: 18px; /* Adjust font size as needed */
+    padding: 8px 0;
+    transition: color 0.3s ease-in-out;
 }
 
 .navbar.shrink .navbar-links a {
     font-size: 15px; /* Adjust font size for the shrunken state */
 }
 
+.navbar-links a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-links a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
 .navbar-links a:hover {
-    color: #362b06;
+    color: #f0e68c;
 }
 
 .download-button {

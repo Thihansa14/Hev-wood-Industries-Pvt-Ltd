@@ -47,7 +47,7 @@ const NavBar = () => {
       <ul>
       <ul>
         <li>
-        <a href="/brochure.pdf" download="Brochure" className="download-button">Download Brochure</a>
+        <a href="/Brochure.pdf" download="Brochure" className="download-button">Download Brochure</a>
         </li>
       </ul>
       </ul>

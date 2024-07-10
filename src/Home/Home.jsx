@@ -6,7 +6,7 @@ import featuredProduct3 from './featuredProduct3.jpg'; // replace with actual pa
 import featuredProduct4 from './featuredProduct4.jpg'; // replace with actual paths
 import featuredProduct5 from './featuredProduct5.jpg'; // replace with actual paths
 import featuredProduct6 from './featuredProduct6.jpg'; // replace with actual paths
-import aboutImage from './AboutImage.jpg'; // replace with actual path
+import aboutImage from './Logo.jpg'; // replace with actual path
 import deliveryIcon from './Transport.png';
 import salesTeamIcon from './TeamSales.png';
 import warrantyIcon from './Warrenty.png';

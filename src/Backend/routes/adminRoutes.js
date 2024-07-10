@@ -1,24 +1,8 @@
+// routes/adminRoutes.js
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const Admin = require('../models/adminModel');
+const { loginAdmin } = require('../controllers/adminController');
 
-router.post('/login', async (req, res) => {
-    const { username, password } = req.body;
-
-    try {
-        const admin = await Admin.findOne({ username });
-        if (!admin) return res.status(400).json({ message: 'Invalid credentials' });
-
-        const isMatch = await bcrypt.compare(password, admin.password);
-        if (!isMatch) return res.status(400).json({ message: 'Invalid credentials' });
-
-        const token = jwt.sign({ id: admin._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
-        res.json({ token });
-    } catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-});
+router.post('/login', loginAdmin);  // Update this line
 
 module.exports = router;

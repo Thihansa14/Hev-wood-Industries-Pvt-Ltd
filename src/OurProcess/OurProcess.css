@@ -10,6 +10,7 @@
   text-align: left;
   margin-bottom: 30px;
   background-color: #706233; /* Background color for the big rectangle */
+  background-image: linear-gradient(#706233, #e1c78f, #ffffff);
   padding: 20px;
   border-radius: 10px;
   position: relative; /* Make the container relative */
@@ -20,7 +21,7 @@
 
 .process-header h1 {
   font-size: 50px;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 10px;
   text-align: left; /* Center align the header text */
   font-family: 'Admina', serif;
@@ -28,7 +29,7 @@
 
 .process-header p {
   font-size: 20px;
-  color: #ffffff;
+  color: #3f0909;
   margin-bottom: 20px;
   max-width: 600px; /* Set a max width to help control line breaks */
   line-height: 1.6;
@@ -89,10 +90,12 @@
 .step-content {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  /* gap:20px; */
   background-color: #706233; /* Background color for the big rectangle */
   padding: 20px;
   border-radius: 10px;
+  height: 300px;
+  padding-top: 100px;
 }
 
 .step-text {
@@ -103,6 +106,9 @@
   padding: 20px;
   border-radius: 10px;
   font-family: 'AmstelvarAlpha', serif;
+  /* padding-top: 100px; */
+  margin-bottom: 500px;
+  align-items: center;
 }
 
 .step-image {

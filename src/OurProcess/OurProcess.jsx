@@ -14,7 +14,7 @@ const OurProcess = () => {
         <h2>01 CUTTING AND TREATMENT</h2>
         <div className="step-content1">
           <img src="src\OurProcess\CuttingAndTreatment.png" alt="Cutting and Treatment" className="step-image" />
-          <div className="step-text">
+          <div className="step-text1">
             <p>At HEV-Wood Industries, the process begins with the careful selection and cutting of high-quality timber. We prioritize sustainability and source our wood from responsibly managed forests.</p>
             <p>Once the timber is cut to the required dimensions, it undergoes a Boron treatment. Boron is a chemical compound known for its efficacy in protecting wood against decay, wood-boring insects, and fungal attacks.</p>
             <p>The wood is submerged in a Boron solution for a specific period, ensuring deep penetration of the treatment. This process not only extends the life of the wood but also enhances its structural integrity.</p>
@@ -39,7 +39,7 @@ const OurProcess = () => {
         <h2>03 GLUING</h2>
         <div className="step-content1">
           <img src="src\OurProcess\Gluing.png" alt="Gluing" className="step-image" />
-          <div className="step-text">
+          <div className="step-text1">
             <p>Once the frames are ready, we move on to attaching the plywood sheets. We use high-quality imported sheets, selected for their durability and aesthetic appeal.</p>
             <ul>
               <li>Ordinary Skin (2.7mm thickness)</li>
@@ -74,7 +74,7 @@ const OurProcess = () => {
         <h2>05 FINISHING</h2>
         <div className="step-content1">
           <img src="src\OurProcess\Finishing.png" alt="Finishing" className="step-image" />
-          <div className="step-text">
+          <div className="step-text1">
             <p>The final stage of the process is finishing, where each door is meticulously crafted to achieve the highest quality standards.</p>
             <ul>
               <li>Sanding: The doors are sanded to achieve a smooth, even surface, preparing them for the application of finishes.</li>
